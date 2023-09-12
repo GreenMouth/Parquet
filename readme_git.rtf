@@ -1,6 +1,6 @@
 
 Dataset:
-https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page\
+https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page
 
 (base) ~ % pwd
 (base) ~ % cd /Users/Prashant.Shinde/Desktop
@@ -10,10 +10,10 @@ https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page\
 (base) Parquet % parq trips.parquet.parquet --head 5 
 (base) Parquet % python
 >>> import pyarrow.parquet as pq
->>> file = pq.ParquetFile("/Users/Prashant.Shinde/Desktop/Parquet/trips.parquet")\
+>>> file = pq.ParquetFile("/Users/Prashant.Shinde/Desktop/Parquet/trips.parquet")
 >>> file.metadata
 >>> file.schema
 >>> df = file.read().to_pandas()
 >>> df.to_csv("trips.csv")
 >>> df.to_json("trips.json", orient="records", lines=True)
->>> df.to_csv('trips.zip', compression={'method': 'zip', 'archive_name': 'trips.csv'\})}
+>>> df.to_csv('trips.zip', compression={'method': 'zip', 'archive_name': 'trips.csv'})
